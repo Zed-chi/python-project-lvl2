@@ -8,12 +8,15 @@ license = "MIT"
 classifiers = [
     "Topic :: Utilities",
 ]
+packages = [
+    { include = "gendiff"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
-flake8
+flake8 = "*"
 
 [tool.poetry.scripts]
 gendiff = "gendiff.app:main"
