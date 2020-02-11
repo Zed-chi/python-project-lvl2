@@ -9,11 +9,9 @@ def get_file_content(filepath):
 
 def get_path(path):
     path = os.path.normpath(path)
-    if os.path.isabs(path):
-        print(path)
-    else:
+    if not os.path.isabs(path):
         path = os.path.join(os.getcwd(), path)
-        print(path)
+    return path
 
 
 def get_args():

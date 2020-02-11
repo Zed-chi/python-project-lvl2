@@ -1,14 +1,14 @@
 from .scripts.utils import get_args
-from .scripts.differ import get_diff, print_json_diff
+from .scripts.differ import get_diff_summary, print_diff
 
 # from sourcer import source
 
 
-def main():
+def generate_diff():
     args = get_args()
-    json_diff = get_diff(args.first_file, args.second_file)
-    print_json_diff(json_diff)
+    diff = get_diff_summary(args.first_file, args.second_file)
+    print_diff(*diff)
 
 
 if __name__ == "__main__":
-    main()
+    generate_diff()
