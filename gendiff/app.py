@@ -1,5 +1,5 @@
 import argparse
-
+from .scripts.utils import get_path
 # from differ import diff
 # from sourcer import source
 
@@ -15,3 +15,5 @@ def main():
     )
     args = parser.parse_args()
     print(args)
+    get_path(args.first_file)
+    get_path(args.second_file)
