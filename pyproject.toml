@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-project-lvl2"
-version = "0.1.1"
+version = "0.1.2"
 description = "App shows difference between two files passed as arguments"
 authors = ["Zed-chi <zed-chi@mail.ru>"]
 repository = "https://github.com/Zed-chi/python-project-lvl2"
