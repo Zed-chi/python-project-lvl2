@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-project-lvl2"
+name = "zedchi_gendiff"
 version = "0.1.5"
 description = "App shows difference between two files passed as arguments"
 authors = ["Zed-chi <zed-chi@mail.ru>"]
