@@ -1,6 +1,7 @@
 import os
 import argparse
 
+
 def get_file_content(filepath):
     with open(filepath, "r") as f:
         return f.read()
