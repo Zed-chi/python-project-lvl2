@@ -1,9 +1,5 @@
 from json import loads
-
-
-def get_file_content(filepath):
-    with open(filepath, "r") as f:
-        return f.read()
+from utils import get_file_content, get_path
 
 
 a = loads(get_file_content("./a.json"))
@@ -36,3 +32,5 @@ for k in diff_a:
 for k in diff_b:
     print(f"  + {k}: {b[k]}")
 print("}")
+
+get_path("./asdas.re")
