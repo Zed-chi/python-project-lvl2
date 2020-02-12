@@ -7,3 +7,6 @@ lint:
 publish:
 	poetry build
 	poetry publish -r test
+
+test:
+	poetry run pytest -v ./gendiff/tests
