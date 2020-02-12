@@ -14,17 +14,18 @@ def get_diff_summary(filepath1, filepath2, format="json"):
         return [a, b, diff_a, diff_b, common]
 
 
-def print_diff(a, b, diff_a, diff_b, common, format="json"):
+def diff_to_str(a, b, diff_a, diff_b, common, format="json"):
     if format == "json":
-        print("{")
+        result = "{"
         for key in common:
             if a[key] != b[key]:
-                print(f"  - {key}: {a[key]}")
-                print(f"  + {key}: {b[key]}")
+                result += f"\n  - {key}: {a[key]}"
+                result += f"\n  + {key}: {b[key]}"
             else:
-                print(f"    {key}: {a[key]}")
+                result += f"\n    {key}: {a[key]}"
         for key in diff_a:
-            print(f"  - {key}: {a[key]}")
+            result += f"\n  - {key}: {a[key]}"
         for key in diff_b:
-            print(f"  + {key}: {b[key]}")
-        print("}")
+            result += f"\n  + {key}: {b[key]}"
+        result += "\n}"
+    return result
