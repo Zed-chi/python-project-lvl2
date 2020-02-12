@@ -6,3 +6,4 @@ install:
   - pip install flake8
 script: 
   - make lint
+  - make test
