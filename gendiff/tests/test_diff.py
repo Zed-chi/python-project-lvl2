@@ -14,10 +14,11 @@ def test_json_diff(result):
     )
     assert diff == result
 
+
 def test_yml_diff(result):
     diff = generate_diff(
         "./gendiff/tests/fixtures/a.yml",
         "./gendiff/tests/fixtures/b.yml",
-        format="yml"
+        format="yml",
     )
-    assert diff==result
+    assert diff == result

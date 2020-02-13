@@ -22,7 +22,6 @@ def get_diff_summary(filepath1, filepath2, format="json"):
         diff_b = set(b.keys()).difference(set(a.keys()))
         common = set(a.keys()).intersection(set(b.keys()))
         return [a, b, diff_a, diff_b, common]
-    
 
 
 def diff_to_str(a, b, diff_a, diff_b, common, format="json"):
