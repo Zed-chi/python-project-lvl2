@@ -24,3 +24,19 @@ def get_args():
         "-f", "--format", type=bool, help="set format of output"
     )
     return parser.parse_args()
+
+
+def diff_to_str(diff):
+    result = "{"
+    for key in diff["common_keys"]:
+        if a[key] != b[key]:
+            result += f"\n  - {key}: {a[key]}"
+            result += f"\n  + {key}: {b[key]}"
+        else:
+            result += f"\n    {key}: {a[key]}"
+    for key in diff_a:
+        result += f"\n  - {key}: {a[key]}"
+    for key in diff_b:
+        result += f"\n  + {key}: {b[key]}"
+    result += "\n}"
+    return result

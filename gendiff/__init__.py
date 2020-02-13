@@ -1,6 +1,8 @@
-from .scripts.differ import get_diff_summary, diff_to_str
+from .scripts.parsers import get_differ
+from .scripts.utils import diff_to_str
 
 
 def generate_diff(a, b, format="json"):
-    diff_summary = get_diff_summary(a, b, format=format)
-    return diff_to_str(*diff_summary)
+    differ = get_differ(format)
+    diff_summary = differ(a, b)
+    return diff_to_str(diff_summary)
